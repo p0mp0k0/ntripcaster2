@@ -21,7 +21,8 @@ RUN mv gitconf/* .
 RUN rm -rf gitconf
     
 EXPOSE 2101 8001 8002
-ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start"]
+ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start", "."]
+CMD ["bash"]
 
 
 
