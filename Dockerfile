@@ -22,11 +22,9 @@ RUN cd /usr/local/ntripcaster/conf \
 && sudo cp sourcemounts.aut.dist sourcemounts.aut \
 && sudo cp sourcetable.dat.dist sourcetable.dat \
 && sudo cp users.aut.dist users.aut
-
-RUN cd /usr/local/ntripcaster/bin && sudo ./ntripcaster start
     
 EXPOSE 2101 8001 8002
-CMD ["bash"]
+CMD ["sudo", "./usr/local/ntripcaster/bin/ntripcaster", "start"]
 
 
 
