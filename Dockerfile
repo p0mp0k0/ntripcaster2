@@ -20,8 +20,7 @@ RUN cd ntripcaster2 \
 && chmod 777 configure \
 && sudo ./configure --enable-fsstd \
 && sudo make \
-&& sudo gmake \
-&& sudo gmake install
+&& sudo make install
 
 WORKDIR /etc/ntripcaster
 RUN git clone ${CONF_URL} gitconf
