@@ -23,7 +23,7 @@ RUN cd /usr/local/ntripcaster/conf \
 && cp users.aut.dist users.aut
     
 EXPOSE 2101 8001 8002
-CMD ["/usr/local/ntripcaster/bin/ntripcaster", "start"]
+ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start", "."]
 
 
 
