@@ -5,7 +5,8 @@ ENV ver=2.0
 RUN apt-get update && apt-get install -y build-essential\
     wget\
     gcc\
-    git
+    git \
+    sudo
 
 WORKDIR /home/$USER/work
 ARG NTRIPCASTER_URL=https://github.com/jabastien/ntripcaster2.git
