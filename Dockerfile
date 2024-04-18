@@ -17,8 +17,8 @@ RUN cd ntripcaster2 && chmod +x ./configure && ./configure && make && make insta
 
 WORKDIR /usr/local/ntripcaster/conf
 RUN git clone ${CONF_URL} gitconf
-RUN mv gitconf/* .
-RUN rm -rf gitconf
+RUN cp gitconf/* .
+RUN cp gitconf/* /etc/ntripcaster
     
 EXPOSE 2101 8001 8002
 ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start"]
