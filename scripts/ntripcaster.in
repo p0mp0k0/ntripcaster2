@@ -35,7 +35,7 @@ start() {
         fi
 
         echo "Starting Ntrip caster$SUBTEXT..."
-        gosu $BINDIR/casterwatch $SUB &
+        $BINDIR/casterwatch $SUB &
         echo $! > $WATCHPIDFILE
 }
 
