@@ -11,7 +11,7 @@ WORKDIR /home/$USER/work
 ARG NTRIPCASTER_URL=https://github.com/jabastien/ntripcaster2.git
 RUN git clone --depth 1 ${NTRIPCASTER_URL}
 RUN cd ntripcaster2
-RUN chmod +x configure
+RUN chmod +x ./configure
 RUN ./configure
 RuN make && make install
 # && (cd ntripcaster2/conf;make;make install)\
