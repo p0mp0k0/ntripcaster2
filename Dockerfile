@@ -26,7 +26,7 @@ RUN git clone ${CONF_URL} gitconf
 RUN cp gitconf/* .
     
 EXPOSE 2101 8001 8002
-ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start"]
+ENTRYPOINT ["sudo", "/usr/local/ntripcaster/bin/ntripcaster", "start"]
 
 
 
