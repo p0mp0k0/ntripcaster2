@@ -46,7 +46,7 @@ trapper() {
 
 running=1
 
-trap 'trapper' 3 6 9 15
+trap 'trapper' HUP INT QUIT TERM
 echo `date +%s` > $STARTFILE
 
 if ! startcaster; then
