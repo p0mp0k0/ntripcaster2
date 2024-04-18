@@ -18,6 +18,7 @@ RUN cd ntripcaster2 && chmod +x ./configure && ./configure && make && make insta
 WORKDIR /usr/local/ntripcaster/conf
 RUN git clone ${CONF_URL} gitconf
 RUN cp gitconf/* .
+RUN mkdir -p /etc/ntripcaster
 RUN cp gitconf/* /etc/ntripcaster
     
 EXPOSE 2101 8001 8002
