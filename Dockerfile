@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y build-essential\
     git 
 
 WORKDIR /home/$USER/work
-ARG NTRIPCASTER_URL=https://github.com/jabastien/ntripcaster2.git
+ARG NTRIPCASTER_URL=https://github.com/nyanyaon/ntripcaster2.git
 ARG CONF_URL=https://github.com/nyanyaon/TabananConfNtripCaster.git
 
 RUN git clone --depth 1 ${NTRIPCASTER_URL}
