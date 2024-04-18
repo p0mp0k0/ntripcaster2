@@ -17,7 +17,7 @@ WATCHFILE=$VARDIR/watchdog$SUBNAME.check
 ARGS="-d $CONFDIR -b"
 
 log() {
-	logger -i -p local1.err -t casterwatch "$@"
+	gosu logger -i -p local1.err -t casterwatch "$@"
 #	echo "$@"
 }
 
