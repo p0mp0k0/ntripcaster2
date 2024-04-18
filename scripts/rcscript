@@ -14,8 +14,8 @@
 # Description:       Start the ntripcaster daemon
 ### END INIT INFO
 
-CASTER_CONFIG=/usr/local/ntripcaster/conf/
-PROG=/usr/local/ntripcaster/bin/ntripcaster
+CASTER_CONFIG=/etc/ntripcaster/
+PROG=/usr/bin/ntripcaster
 
 # Source SuSE config
 . /etc/rc.status
