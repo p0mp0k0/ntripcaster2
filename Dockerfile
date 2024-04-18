@@ -7,6 +7,7 @@ RUN apt-get update && apt-get install -y build-essential\
     gcc\
     curl \
     sudo \
+    gmake \
     git 
 
 WORKDIR /home/$USER/work
