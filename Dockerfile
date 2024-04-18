@@ -6,6 +6,7 @@ RUN apt-get update && apt-get install -y build-essential\
     wget\
     gcc\
     curl \
+    sudo \
     git 
 
 WORKDIR /home/$USER/work
@@ -14,13 +15,16 @@ ARG CONF_URL=https://github.com/nyanyaon/TabananConfNtripCaster.git
 
 RUN git clone --depth 1 ${NTRIPCASTER_URL}
 
-RUN cd ntripcaster2 && chmod +x ./configure && ./configure && make && make install
+RUN cd ntripcaster2 \
+&& chmod 777 configure \
+&& sudo ./configure --enable-fsstd \
+&& sudo make \
+&& sudo gmake \
+&& sudo gmake install
 
-WORKDIR /usr/local/ntripcaster/conf
+WORKDIR /etc/ntripcaster
 RUN git clone ${CONF_URL} gitconf
 RUN cp gitconf/* .
-RUN mkdir -p /etc/ntripcaster
-RUN cp gitconf/* /etc/ntripcaster
     
 EXPOSE 2101 8001 8002
 ENTRYPOINT ["/usr/local/ntripcaster/bin/ntripcaster", "start"]

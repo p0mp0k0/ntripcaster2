@@ -26,7 +26,7 @@ startcaster() {
 	mkdir -p $LOGDIR 2>/dev/null >/dev/null
 	cd $CONFDIR
 	log "Starting Ntrip caster service$SUBTEXT"
-	exec gosu $CASTER $ARGS
+	$CASTER $ARGS
 	return $?
 }
 
