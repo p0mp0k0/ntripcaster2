@@ -15,7 +15,7 @@ RUN git clone --depth 1 ${NTRIPCASTER_URL}
 
 RUN cd ntripcaster2 && chmod +x ./configure && sudo ./configure && sudo make && sudo make install
 
-RUN cd /etc/ntripcaster \
+RUN cd /usr/local/ntripcaster/conf \
 && sudo cp clientmounts.aut.dist clientmounts.aut \
 && sudo cp groups.aut.dist groups.aut \
 && sudo cp ntripcaster.conf.dist ntripcaster.conf \
